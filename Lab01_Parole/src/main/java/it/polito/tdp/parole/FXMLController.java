@@ -25,6 +25,10 @@ public class FXMLController {
 
     @FXML // fx:id="txtParola"
     private TextField txtParola; // Value injected by FXMLLoader
+    
+    @FXML
+    private TextArea txtTempi;
+
 
     @FXML // fx:id="btnInserisci"
     private Button btnInserisci; // Value injected by FXMLLoader
@@ -40,10 +44,14 @@ public class FXMLController {
          String s = txtParola.getText();
          elenco.addParola(s);
          String sa = "";
-         for(String sx : elenco.getElenco())
+         String t ="";
+         for(String sx : elenco.getElenco()) {
         	 sa = sa + sx + "\n";
+        	 t=t+System.nanoTime()+"\n"; 
+         }
          
          txtResult.setText(sa);
+         txtTempi.setText(t);
     }
     
     @FXML // fx:id="btnRemove"

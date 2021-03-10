@@ -3,12 +3,15 @@ import java.util.*;
 
 public class Parole {
     
-	LinkedList<String> lista ;
+	//LinkedList<String> lista ;
+	ArrayList<String> lista;
 	
 
 
 	public Parole() {
-		lista = new LinkedList<String>();
+	//	lista = new LinkedList<String>();
+		lista = new ArrayList<String>();
+		
 	}
 
 	
